@@ -1,0 +1,9 @@
+Insert in queue
+
+In linked list implementation of a queue, front and rear pointers are tracked. Which of these pointers will change during an insertion into EMPTY queue?
+Options
+a.Only front pointer
+b.Only rear pointer
+c.Both front and rear pointer 
+d.None
+Correct Answer: c
