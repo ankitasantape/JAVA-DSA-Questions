@@ -1,0 +1,9 @@
+Correct order
+
+If the elements “p”, “q”, “r” and “s” are placed in a queue and are deleted one at a time, in what order will they be removed?
+Options
+a.srqp
+b.pqrs 
+c.srpq
+d.qrsp
+Correct Answer: b
