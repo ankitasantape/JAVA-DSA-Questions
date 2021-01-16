@@ -224,5 +224,26 @@ public class QueueUsingArray {
 if 3 size ka array hai jb hum queue me se last element delete krte hai tb front & rear reset hojane chahiye 0 pe
 front = 0 , rear = 0 but aise nhi ho rha,Aur humare code ke according front = 3, rear = 2, size = 0 aisa ho rha which is wrong 
 to hume kya krna chahiye if( size == 0 ) hai to front and rear dono reset hone chahiye front = 0 & rear = 0 hone chahiye becoz queue me ek bhi element nhi bacha 	      
+
+Double the Size Of A Queue
+  queue -> | 5 | 10 | 15 | 30 |
+       
+    operation | front | rear | size |index| 0 |  1 |  2 | 3  |  
+    enque(5)     0      0        1        | 5 |    |    |    |
+    enque(10)    0      1        2        | 5 | 10 |    |    |
+    enque(15)    0      2        3        | 5 | 10 | 15 |    |
+    enque(30)    0      3        4        | 5 | 10 | 15 | 30 |
+    deque(5)     1      3        3        |   | 10 | 15 | 30 |            
+    deque(10)    2      3        2        |   |    | 15 | 30 | 
+    enque(25)    2      0        3        | 25|    | 15 | 30 |
+    enque(30)    2      1        4        | 25| 30 | 15 | 30 |
+    
+                      rear   front              we have to double the capacity of this queue
+     queue -> | 25  |  30  |  15  |  30  | ==>  2 * length of original queue
+     
+     first copy this array not like that we have done some previous data structure like array and stack 
+     we have to copy from front to end of queue which is half part and remaining part from 0 to front-1
+     
+    copied queue -> | 25 | 30 | 5 | 10 |   |   |   |   |  
 */
 }
