@@ -74,7 +74,7 @@ Output:
 
 
 */
-public class TreeUse {
+public class TakeInputOutputRecursive {
 
 	public static TreeNode<Integer> takeInput(Scanner s) {
 
