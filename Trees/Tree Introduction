@@ -1,0 +1,54 @@
+* Data Structure is basically a different way to store a data for eg. Array, LikedList, Stack, Queue, ect.
+* In Stack and Queue, underlined data is stored using Array or LinkedList nothing different only access is different to get element.
+* We can say that there are two types of data structure 
+  1. Which changes how data is stored in memory - Eg. Array, LinkedList
+  2. Some data structures which is just a layer above a basic data structure which defines how data is accessible to the user. 
+  Eg. Stack - The only way to data accessible to me is last element that is available to access,
+      Queue - The only way to data accessible to me is first element that is available to access.
+      
+ * TREE - Tree is primary data structure, who will change how the data is organized in the memory.
+ * Some use case fit for Array, some use cases fit for LinkedList and some use cases may not be fit for Array and LinkedList in that case we will try to find some other data structure.And one of the option is going to be a tree.
+   Eg. In a file system, there is a main directory which means root directory, in this directory which contains some other directories and individual files and each of this directory again contains some other directory and files.. and so on  
+                                     ROOT
+                         /    /       /\      \         \
+                     /     /        /    \       \         \
+                  /      /        /        \        \         \
+               DIR1      DIR2      FILE1      FILE2     DIR3     FILE3
+             /  |  \    / | \     /  |  \    /  |  \    / |  \    / |  \
+          DIR1 F1  F2  D2 F3 D3  D4  F4 F5  D5  F6  D6 F7 F8 D7  D8 F9  F10
+          .                .
+          .                .
+          .                .
+          .                .
+          .                .
+          .                .
+ * In LinkedList, headNode store address of nextNode, nextNode store address of next of nextNode likewise,
+ * In Tree, rootNode store address of multiple childNode, now each of this Childnode store address of their childNode, this structure is look like tree.
+                                    root
+                                /   /   \    \
+                              /    /     \     \
+                             a     b      c      d   <-- siblings of parent root
+                                 / | \        /  |  \
+                               /   |   \    /    |   \
+                              e    f    g   h    i     j
+                            /
+                          / 
+                         k  <---- Leaf
+ Termonologies : RootNode   - Head of tree
+                 ChildNode  - Ek node ke niche directly jo node hoti hai use childnode kahate hai 
+                 Siblings   - Siblings are those having same parent
+                 Leaf       - A node with no child
+                 Descendant - Root's child -> child's child -> childOfchild's child , so everything is descendant of root    
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
