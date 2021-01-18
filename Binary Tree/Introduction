@@ -1,0 +1,31 @@
+BINARY TREE: Binary tree have only zero, one or two children not more than that.
+
+1)  1    2)  2  3)  1
+   /               /\
+  2               2  3
+  
+  class BinaryTreeNode<T>{
+        int data;
+        BinaryTreeNode<T> left;
+        BinaryTreeNode<T> right;
+        
+        public BinaryTreeNode(int data){
+             this.data = data;
+             left = null;
+             right = null;
+        }    
+        
+  }
+  public class TreeUse{
+         
+         public static void main(String[] args){
+               BinaryTreeNode<Integer> root = new BinaryTreeNode<>(1);
+               BinaryTreeNode<Integer> node1 = new BinaryTreeNode<>(2);
+               BinaryTreeNode<Integer> node2 = new BinaryTreeNode<>(3);
+               root.left = node1;
+               root.right = node2;
+               System.out.println(root);
+         }
+  }
+  
+  
