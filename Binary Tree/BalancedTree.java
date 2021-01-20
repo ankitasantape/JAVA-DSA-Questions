@@ -56,7 +56,7 @@ public class BalancedTree {
       return checkBalanced1( root.left ) && checkBalanced1( root.right );
    }
    
-   
+   // Optimized Approach - Time Complexity - O(n)
    public static Pair3<Boolean, Integer> checkBalanced( BinaryTreeNode<Integer> root ) {
 	
 	   if ( root == null ) {
