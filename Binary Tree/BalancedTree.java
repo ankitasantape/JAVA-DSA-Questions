@@ -60,10 +60,10 @@ public class BalancedTree {
    public static Pair3<Boolean, Integer> checkBalanced( BinaryTreeNode<Integer> root ) {
 	
 	   if ( root == null ) {
-		      Pair3<Boolean , Integer> output = new Pair3<>();
-			    output.isBalanced = true;
-			    output.height = 0;
-			    return output;
+		   Pair3<Boolean , Integer> output = new Pair3<>();
+			output.isBalanced = true;
+			output.height = 0;
+			return output;
 	   }
 	   
 	  Pair3<Boolean, Integer> ans1 = checkBalanced( root.left );
@@ -71,14 +71,26 @@ public class BalancedTree {
 	  
 	  Pair3<Boolean, Integer> ans = new Pair3<>();
 	  
-	  if(ans.isBalanced==true && ans.isBalanced==true ) {
+	  if ( ans1.isBalanced == true && ans2.isBalanced == true ) {
 		  
-		    if(Math.abs(height(root.left) - height(root.right )) >= 1) {
-	        	 return ans;
-         }
-		 }
+		  if ( Math.abs(height(root.left) - height(root.right )) > 1) {
+	        	
+			    ans = new Pair3<>();
+			    ans.height = Math.max(height(root.left), height(root.right))+1;
+			    ans.isBalanced = false; 		
+	        	return ans;
+	      
+		  } else {
+			    
+			    ans = new Pair3<>();
+			    ans.height = Math.max(height(root.left), height(root.right))+1;
+			    ans.isBalanced = true; 		
+	        	return ans;
+		  }
+		  
+	  }
 	   return null;
-	}
+  }
   public static BinaryTreeNode<Integer> takeInput( ) {
 		Scanner s = new Scanner(System.in);
 		Queue<BinaryTreeNode<Integer>> pendingNodes = new LinkedList<>();
@@ -113,7 +125,8 @@ public class BalancedTree {
 	}
   public static void main(String[] args) {
 		BinaryTreeNode<Integer> root = takeInput();
-		System.out.println(checkBalanced(root));
+		System.out.println(checkBalanced1(root));
+		System.out.println(checkBalanced(root).isBalanced);
 	}
 
 
