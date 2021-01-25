@@ -57,19 +57,19 @@ public class InputOutputLevelWiseTraversal {
 	s.close();
 
 	return root;
-}
+  }
 
-	public static void printLevelWise(TreeNode<Integer> root) {
+  public static void printLevelWise(TreeNode<Integer> root) {
 
-		Queue<TreeNode<Integer>> queue = new LinkedList<>();
+	Queue<TreeNode<Integer>> queue = new LinkedList<>();
 		
-    //First insert root into queue
-		queue.add(root); // 1
+        //First insert root into queue
+	queue.add(root); // 1
 		
-    //then insert null means, level1 is inserted into queue
-		queue.add(null); // null    1--->null
+        //then insert null means, level1 is inserted into queue
+       queue.add(null); // null    1--->null
 		
-    //jb tk queue empty nhi hoti tb tk traverse kro
+       //jb tk queue empty nhi hoti tb tk traverse kro
 		while(!queue.isEmpty()) {
 		        //first, deque first elem from queue and store it into frontNode
 			      TreeNode<Integer> frontNode = queue.poll(); // frontNode = 1,null,2,3,4,null,5,6,null
@@ -78,14 +78,14 @@ public class InputOutputLevelWiseTraversal {
 				        if(!queue.isEmpty() ) {
 					            queue.add(null);
 				        }
-		       } else {
-			          System.out.print(frontNode.data+" ");
-		           //then, insert all the children of frontNode into queue
-		           for( int i = 0; i < frontNode.children.size(); i++ ) {
-				           TreeNode<Integer> child = frontNode.children.get(i);
-				           queue.add(child);
-			         }
-		      }
+		                } else {
+			                System.out.print(frontNode.data+" ");
+		                        //then, insert all the children of frontNode into queue
+		                        for( int i = 0; i < frontNode.children.size(); i++ ) {
+				                 TreeNode<Integer> child = frontNode.children.get(i);
+				                 queue.add(child);
+			                }
+		               }
 		}
 	}
 
